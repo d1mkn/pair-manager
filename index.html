@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>Test</h1>
+        <form class="add-pair">
+          <div class="form-wrap">
+            <label for="pair">Name/Value Pair</label>
+            <input
+              class="new-pair"
+              type="text"
+              name="pair"
+              id="pair"
+              placeholder="Name=Value"
+              required
+              pattern="^(\s*[a-zA-Z0-9]+)\s*=\s*([a-zA-Z0-9]+\s*)$"
+              title="Format: Name=Value"
+            />
+          </div>
+          <button class="submit-btn" type="submit">Add</button>
+        </form>
+
+        <div class="user-data">
+          <div class="user-data-wrap">
+            <fieldset>
+              <legend>Name/Value Pair List</legend>
+              <div class="data-list"></div>
+            </fieldset>
+          </div>
+          <div class="button-wrap">
+            <button class="by-name-btn" disabled>Sort by Name</button>
+            <button class="by-value-btn" disabled>Sort by Value</button>
+            <button class="del-btn" disabled>Delete</button>
+            <button class="xml-btn">Show XLM</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

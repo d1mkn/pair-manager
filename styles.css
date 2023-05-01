@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+main {
+  height: 100%;
+}
+
+main {
+  display: flex;
+  align-items: center;
+}
+
+body {
+  background-color: #4b7fc4;
+
+  font-family: sans-serif;
+}
+
+input,
+.data-list {
+  font-size: 16px;
+  border: 2px solid #cccccc;
+  border-radius: 5px;
+}
+
+button {
+  height: 22px;
+}
+
+fieldset {
+  border: none;
+}
+
+label,
+legend {
+  font-size: 14px;
+  color: #888;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+
+  margin: 0px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  gap: 30px;
+}
+
+.form-wrap {
+  display: flex;
+  flex-direction: column;
+
+  width: 70%;
+
+  gap: 5px;
+}
+
+.add-pair {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.submit-btn {
+  width: 25%;
+}
+
+.user-data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-data-wrap {
+  display: flex;
+  flex-direction: column;
+
+  width: 70%;
+}
+
+.data-list {
+  height: 300px;
+  overflow: auto;
+}
+
+.data-el-wrap input {
+  display: none;
+}
+
+.data-el-wrap input:checked + label {
+  background-color: #dfbd8a;
+}
+
+.data-el-wrap label {
+  display: inline-block;
+  width: 100%;
+  font-size: 16px;
+  color: #000;
+}
+
+.button-wrap {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 14px;
+
+  gap: 15px;
+}
+
+/* -------------------------------------Desktop--------------------------------*/
+@media screen and (min-width: 900px) {
+  .data-list {
+    height: 300px;
+    resize: none;
+  }
+
+  .container {
+    width: 500px;
+  }
+
+  .submit-btn {
+    width: 85.5px;
+  }
+}
+
+/*--------------------------------------Tablet-------------------------------- */
+@media screen and (min-width: 768px) and (max-width: 899px) {
+  button {
+    height: 27px;
+    font-size: 18px;
+  }
+
+  input {
+    font-size: 20px;
+  }
+
+  .container {
+    width: 90%;
+    gap: 20px;
+  }
+
+  .button-wrap {
+    width: 25%;
+  }
+
+  .data-el-wrap label {
+    font-size: 20px;
+  }
+}
+
+/* ----------------------------------Mobile---------------------------------- */
+@media screen and (max-width: 767px) {
+  button {
+    height: 27px;
+    font-size: 18px;
+  }
+
+  label,
+  legend {
+    font-size: 12px;
+  }
+
+  .container {
+    width: 330px;
+    height: fit-content;
+  }
+
+  .form-wrap {
+    width: 100%;
+  }
+
+  .add-pair {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .user-data {
+    flex-direction: column;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+
+  .user-data-wrap {
+    width: 100%;
+  }
+
+  .data-el-wrap label {
+    font-size: 18px;
+  }
+
+  .button-wrap {
+    gap: 10px;
+  }
+}
